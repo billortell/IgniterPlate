@@ -177,7 +177,40 @@ a.big.button {
 
 
 
+@media screen and (max-width: 640px) {
 
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+  
+  .half, .third, .two-thirds {
+    float: none;
+    width: 90%;
+    padding: 5%;
+  }
+  .quarter {
+    width: 40%;
+    padding: 5%;
+    height: 250px;
+  }
+  .left, .right {
+    float: left;
+    clear: right;
+  }
+  a.big.button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quarter {
+    width: 90%;
+    padding: 5%;
+    height: auto;
+  }
+  #logo {
+    padding: 0;
+  }
+
+}
 
 
 
