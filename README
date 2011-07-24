@@ -1,0 +1,34 @@
+IgniterPlate
+
+IgniterPlate combines CodeIgniter and HTML5 Boilerplate.
+
+Changes to CodeIgniter:
+
+If you're already familiar with CodeIgniter, there are few configuration changes already in place.
+.htaccess and /application/config/config.php have been modified to allow clean urls (without the index.php).
+The default controller has been changed from 'welcome' to 'home',
+and the url helper is autoloaded in application/config/autoload.php
+
+Views:
+
+/application/views/template.php - This is the view you'll want to call from your controller.
+You can load your own views by following the example in the home/index controller.
+
+    $data = array(
+        'title'         => 'My Title',
+        'main_content'  => 'path_to/view_file',
+        'other'         => 'other custom data'
+    );
+    $this->load->view('template', $data);
+    
+    
+Build Tool:
+
+Note:
+Do not change the name of /application/views/template.php unless you also change the project properties in /build/config/project.properties.
+    The build tool knows to look for the template.php file to change links to minified javascript and css files.
+
+To use the build tool, you'll need Java, Ant, optipng, and jpegtran installed. More information on the build tool can be found at the HTML5 Boilerplate website: http://html5boilerplate.com
+
+Navigate to the /build folder from the command line and type 'ant build'. This will output your optimized site to the /publish/ folder.
+Provied all the necessary software is installed, this will minify your css and javascript, compress pngs and jpgs, and make the appropriate changes to the template.php file.

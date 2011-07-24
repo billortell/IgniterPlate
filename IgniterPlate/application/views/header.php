@@ -18,7 +18,7 @@
  
     <div class="right third">
         
-        <?php // echo anchor('http://github.com', 'Download from GitHub', 'class="big button" target="_blank"');  ?>
+        <?php // echo anchor('https://github.com/waynhall/IgniterPlate', 'Download from GitHub', 'class="big button" target="_blank"');  ?>
         
     </div>
 </header>
