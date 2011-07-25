@@ -1,15 +1,18 @@
-IgniterPlate
-
+== IgniterPlate ==
 IgniterPlate combines CodeIgniter and HTML5 Boilerplate.
 
-Changes to CodeIgniter:
+== Apache / mod_rewrite ==
+IgniterPlate assumes you are using Apache 2 Web Server with mod_rewrite enabled.
+This allows those running Apache with mod_rewrite to get started quickly without configuration.
+
+== Changes to CodeIgniter ==
 
 If you're already familiar with CodeIgniter, there are few configuration changes already in place.
 .htaccess and /application/config/config.php have been modified to allow clean urls (without the index.php).
 The default controller has been changed from 'welcome' to 'home',
 and the url helper is autoloaded in application/config/autoload.php
 
-Views:
+== Views ==
 
 /application/views/template.php - This is the view you'll want to call from your controller.
 You can load your own views by following the example in the home/index controller.
@@ -22,7 +25,7 @@ You can load your own views by following the example in the home/index controlle
     $this->load->view('template', $data);
     
     
-Build Tool:
+== Build Tool ==
 
 Note:
 Do not change the name of /application/views/template.php unless you also change the project properties in /build/config/project.properties.

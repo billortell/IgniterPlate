@@ -97,7 +97,7 @@ body {
   
 }
 header {
-  padding: 0 2.5% 0 0;
+  padding: 0 2.5% 2.5% 0;
   color: #d5d5d5;
   background: #4c4c4c; /* Old browsers */
   background: -moz-linear-gradient(top, #595959 0%, #131313 100%); /* FF3.6+ */
@@ -115,7 +115,7 @@ h1 {
   color: #f69e40;
 }
 h2 {
-  font-size: 3em;
+  font-size: 2em;
   color: #ec5001;
   text-shadow: 1px 1px 0px #5b2702;
 }
@@ -162,7 +162,7 @@ article p {
   padding: 3% 12% 3% 0;
 }
 a.button {
-  background: #333;
+  background-color: #333;
   border-radius: 10px;
   padding: 10px 25px;
   box-shadow: 0px 1px 1px #131313;
@@ -171,43 +171,58 @@ a.button {
 a.big.button {
   font-size: 2em;
   padding: 5%;
-  margin: 20% auto;
+  margin: 20% auto 10%;
   display: block;
 }
-
+a.twitter.button {
+  background-image: url(/img/twitter_newbird_white.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  color: #ddd
+}
+a.twitter.button:hover {
+  color: #f5c503;
+}
 
 
 @media screen and (max-width: 640px) {
 
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
-  
+  h1 {
+    font-size: 3em;
+  }
   .half, .third, .two-thirds {
     float: none;
     width: 90%;
-    padding: 5%;
+    padding: 1% 5%;
   }
   .quarter {
     width: 40%;
-    padding: 5%;
-    height: 250px;
+    padding: 1% 5%;
+    height: auto;
   }
   .left, .right {
     float: left;
     clear: right;
   }
   a.big.button {
-    margin: 0 auto;
+    margin: 2% auto 5%;
   }
+
 }
 
 @media screen and (max-width: 480px) {
   .quarter {
     width: 90%;
-    padding: 5%;
+    padding: 1% 5%;
     height: auto;
   }
   #logo {
     padding: 0;
+  }
+  header {
+    padding-bottom: 10%;
   }
 
 }
