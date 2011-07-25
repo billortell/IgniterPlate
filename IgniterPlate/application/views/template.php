@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="/css/style.css?v=2">
 
 	<script src="/js/libs/modernizr-1.7.min.js"></script>
-	<script src="js/libs/respond.min.js"></script>
+	<script src="/js/libs/respond.min.js"></script>
 </head>
 <body>
 	<div id="container">
