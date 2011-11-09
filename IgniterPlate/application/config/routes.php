@@ -38,8 +38,8 @@
 |
 */
 
-$route['default_controller'] = 'home';
-$route['404_override'] = 'errors/page_not_found';
+$route['default_controller'] = "welcome";
+$route['404_override'] = 'error/page_not_found';
 
 
 /* End of file routes.php */

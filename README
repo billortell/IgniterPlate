@@ -1,5 +1,5 @@
 == IgniterPlate ==
-IgniterPlate combines CodeIgniter and HTML5 Boilerplate.
+IgniterPlate combines CodeIgniter, HTML5 Boilerplate, and Zurb Foundation CSS Framework.
 
 == Apache / mod_rewrite ==
 IgniterPlate assumes you are using Apache 2 Web Server with mod_rewrite enabled.
@@ -7,31 +7,41 @@ This allows those running Apache with mod_rewrite to get started quickly without
 
 == Changes to CodeIgniter ==
 
-If you're already familiar with CodeIgniter, there are few configuration changes already in place.
-.htaccess and /application/config/config.php have been modified to allow clean urls (without the index.php).
-The default controller has been changed from 'welcome' to 'home',
-and the url helper is autoloaded in application/config/autoload.php
+- application/config/autoload.php
+url helper autoloaded to provide absolute paths to scripts and styles. Make sure to define your $config['base_url'] in application/config/config.php.
 
-== Views ==
+- application/config/routes.php
+$route['404_override'] = 'error/page_not_found' to load the HTML5 Boilerplate 404 page.
 
-/application/views/template.php - This is the view you'll want to call from your controller.
-You can load your own views by following the example in the home/index controller.
+- application/config/config.php
+Removed 'index.php' from $config['index_page'] because urls are rewritten without index.php via .htaccess.
 
-    $data = array(
-        'title'         => 'My Title',
-        'main_content'  => 'path_to/view_file',
-        'other'         => 'other custom data'
-    );
-    $this->load->view('template', $data);
-    
+- application/controllers
+error.php added to control 404 errors.
+
+- application/views
+html5/head and html5/scripts added to place before and after the main content of a view to load the HTML5 Boilerplate, scripts, and styles — inculding those needed for Foundation CSS Framework.
+zurb_foundation.php and igniterplate.php included to provide relevant welcome documentation.
+welcome_message.php modified to include above views, along with CodeIgniter's welcome_message, renamed to ci_welcome_message.php
+
+- .htaccess
+Using HTML5 Boilerplate default .htaccess, plus rewrite rules to strip index.php from CodeIgniter urls.
+
+- build, css, img, js, & test directories
+Directories added within the root directory to contain tools, scripts, stylesheets, and images added by HTML5 Boilerplate, Foundation CSS Framework, as well as your own.
+Once Build script is run, intermediate and publish directories may also be added.
+
+- apple touch icons, favicon, crossdomain.xml, humans.txt, robots.txt
+Inserted in the root directory for HTML5 Boilerplate (icons modified to display IgniterPlate branding). Read the docs on HTML5 Boilerplate for more information.
+
+  
     
 == Build Tool ==
 
-Note:
-Do not change the name of /application/views/template.php unless you also change the project properties in /build/config/project.properties.
-    The build tool knows to look for the template.php file to change links to minified javascript and css files.
+Installation and Use
+- Read the HTML5 Boilerplate docs on how to install Apache Ant and use the build tool.
+- You can also try digging into /build/config/project.properties to add or change the behavior of the build script.
 
-To use the build tool, you'll need Java, Ant, optipng, and jpegtran installed. More information on the build tool can be found at the HTML5 Boilerplate website: http://html5boilerplate.com
-
-Navigate to the /build folder from the command line and type 'ant build'. This will output your optimized site to the /publish/ folder.
-Provied all the necessary software is installed, this will minify your css and javascript, compress pngs and jpgs, and make the appropriate changes to the template.php file.
+Pointers
+- Use @import at the bottom style.css to import other css files (so the build tool will concatenate them all). The ant build tool doesn't seem to like concatenating and minifying the html/head css files.
+- But also include them in the html5/head view so they load into view before the build. (Don't worry. The ant build tool will remove these.)
