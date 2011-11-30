@@ -25,13 +25,8 @@
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="<?php echo site_url(); ?>css/style.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/globals.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/ui.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/forms.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/orbit.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/reveal.css">
+  <link rel="stylesheet" href="<?php echo site_url(); ?>css/foundation.css">
   <link rel="stylesheet" href="<?php echo site_url(); ?>css/app.css">
-  <link rel="stylesheet" href="<?php echo site_url(); ?>css/mobile.css">
   <link rel="stylesheet" href="<?php echo site_url(); ?>css/ci_welcome.css">
   <!-- end CSS-->
   

@@ -1,3 +1,4 @@
+/* Foundation v2.1.1 http://foundation.zurb.com */
 $(document).ready(function() {
 
 	/* Use this js doc for all application specific JS */
@@ -39,5 +40,10 @@ $(document).ready(function() {
 	/* Remove this and jquery.placeholder.min.js if you don't need :) */
 	
 	$('input, textarea').placeholder();
+	
+	
+	/* DISABLED BUTTONS ------------- */
+	/* Gives elements with a class of 'disabled' a return: false; */
+	
 	
 });
