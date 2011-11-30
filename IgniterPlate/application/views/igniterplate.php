@@ -1,8 +1,8 @@
 <div class="row">
     <h2>Welcome to IgniterPlate</h2>
     <p>
-        Combining the power of CodeIgniter, HTML5 Boilerplate, and Foundation CSS Framework
-        so you can code fast, powerful, responsive websites... now!
+        Uniting the power of CodeIgniter, HTML5 Boilerplate, and Zurb's Foundation
+        rapid prototyping tool so you can code the faster, more powerful, responsive websites... Now!
     </p>
     <hr />
 </div>
